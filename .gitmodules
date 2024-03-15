@@ -1,0 +1,6 @@
+[submodule "gears"]
+	path = gears
+	url = https://github.com/chrisspen/gears.git
+[submodule "nutsnbolts"]
+	path = nutsnbolts
+	url = https://github.com/JohK/nutsnbolts.git
