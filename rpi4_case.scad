@@ -112,6 +112,18 @@ module rpi4(){
   }
 }
 
+rpi4_simple();
+
+module rpi4_simple(){
+    cube([86,57,18]);
+    translate([-40,2.,1.5])cube([40,53,16]); //ethernet +++
+    translate([20,57,1.5])cube([60,30,8]); //resten
+    translate([86,22,-6])cube([30,12,6]); //sd
+    translate([27,1,0])cube([51,6,30]); //gpio
+    pins(); // t
+
+}
+
 module mounts(){
   translate([1.25,1.25,(0.5*mount_pin_height)-(board_thickness+case_thickness+pin_space)]){ // this is to move all the pins
           translate([22.2,2,0]) cylinder(mount_pin_height,d=5.9, center=true);     // mount top-r

@@ -36,16 +36,18 @@ module finder_shoe(length){
 //    [0,0]]);
 //};}
 
-module finder_fot(length){
-    rotate([0,90,0]) rotate([0,0,90])
+module finder_foot(length=40,center=false){
+    offset = center ? [-length/2, -33.5/2, 0] : [0, 0, 0]; // Adjust for centering
+
+    translate(offset)rotate([0,90,0]) rotate([0,0,90])
 linear_extrude(length){polygon(points=[[0,0],
      [33.5,0],
      [27.5,11],
-    [30,14],
-    [3.5,14],
+    [30,16],
+    [3.5,16],
     [6,11]]);
 };}
-//finder_fot(30);
+//finder_foot(center=true);
 
 //mirror([0,1,0])
 //rotate([90,0,0])
